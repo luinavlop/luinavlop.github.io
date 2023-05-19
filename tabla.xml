@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE INFO 
+[ 
+<!ELEMENT INFO (MONUMENTS+)> 
+<!ELEMENT MONUMENTS (MONUMENT,SCHEDULE,PRICE,PASS)> 
+<!ELEMENT MONUMENT (#PCDATA)> 
+<!ELEMENT SCHEDULE (#PCDATA)> 
+<!ELEMENT PRICE (#PCDATA)> 
+<!ELEMENT PASS (#PCDATA)>
+]>
+<INFO>
+    <MONUMENTS>
+        <MONUMENT>Saint Mark's Basilica</MONUMENT>
+        <SCHEDULE>9:30 am - 5:15 pm</SCHEDULE>
+        <PRICE>3€</PRICE>
+        <PASS>Included</PASS>
+    </MONUMENTS>
+    <MONUMENTS>
+        <MONUMENT>Doge's Palace</MONUMENT>
+        <SCHEDULE>9:00 am - 6:00 pm</SCHEDULE>
+        <PRICE>30€</PRICE>
+        <PASS>Included</PASS>
+    </MONUMENTS>
+    <MONUMENTS>
+        <MONUMENT>Canal Grande</MONUMENT>
+        <SCHEDULE>24h</SCHEDULE>
+        <PRICE>80€ (gondola)</PRICE>
+        <PASS>Not included</PASS>
+    </MONUMENTS>
+    <MONUMENTS>
+        <MONUMENT>La Fenice Opera</MONUMENT>
+        <SCHEDULE>9:30 am - 1:30 pm</SCHEDULE>
+        <PRICE>14€</PRICE>
+        <PASS>Not included</PASS>
+    </MONUMENTS>
+    <MONUMENTS>
+        <MONUMENT>Campanile di San Marco</MONUMENT>
+        <SCHEDULE>9:30 am - 9:15 pm</SCHEDULE>
+        <PRICE>15€</PRICE>
+        <PASS>Not included</PASS>
+    </MONUMENTS>
+    <MONUMENTS>
+        <MONUMENT>Cannaregio district</MONUMENT>
+        <SCHEDULE>24h</SCHEDULE>
+        <PRICE>Free</PRICE>
+        <PASS>-</PASS>
+    </MONUMENTS>
+    <MONUMENTS>
+        <MONUMENT>Bridge of Sighs</MONUMENT>
+        <SCHEDULE>24h</SCHEDULE>
+        <PRICE>Free</PRICE>
+        <PASS>-</PASS>
+    </MONUMENTS>
+    <MONUMENTS>
+        <MONUMENT>Dorsoduro district</MONUMENT>
+        <SCHEDULE>24h</SCHEDULE>
+        <PRICE>Free</PRICE>
+        <PASS>-</PASS>
+    </MONUMENTS>
+    <MONUMENTS>
+        <MONUMENT>Basilica di Santa Maria Gloriosa dei Frari</MONUMENT>
+        <SCHEDULE>9:00 am - 6:00 pm</SCHEDULE>
+        <PRICE>3€</PRICE>
+        <PASS>Included</PASS>
+    </MONUMENTS>
+    <MONUMENTS>
+        <MONUMENT>Scuola Grande di San Rocco</MONUMENT>
+        <SCHEDULE>9:30 am - 5:30 pm</SCHEDULE>
+        <PRICE>10€</PRICE>
+        <PASS>Not included</PASS>
+    </MONUMENTS>
+    <MONUMENTS>
+        <MONUMENT>Island 'San Giorgio Maggiore'</MONUMENT>
+        <SCHEDULE>24h</SCHEDULE>
+        <PRICE>Free</PRICE>
+        <PASS>-</PASS>
+    </MONUMENTS>
+    <MONUMENTS>
+        <MONUMENT>Scala Contarini del Bovolo</MONUMENT>
+        <SCHEDULE>10:00 am to 6:00 pm</SCHEDULE>
+        <PRICE>8€</PRICE>
+        <PASS>Not included</PASS>
+    </MONUMENTS>
+    <MONUMENTS>
+        <MONUMENT>Mercati di Rialto</MONUMENT>
+        <SCHEDULE>7:30 am - 12:00 pm</SCHEDULE>
+        <PRICE>Free</PRICE>
+        <PASS>-</PASS>
+    </MONUMENTS>
+</INFO>

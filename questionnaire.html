@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="EN">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="author" content="Luis Navarrete">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Luis Navarrete </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" href="css/common_style.css">
+    <link rel="stylesheet" href="css/questionnaire.css">
+    
+</head>
+<body>
+    <header class="header">
+        <!--Here we include title-->
+        <h1>VENICE</h1>
+    </header>
+    <main class="container">
+        <!--Here we include the main menu with a nav with the links to the websites-->
+        <nav class="col-2 col-s-3">
+            <ul class="menu_movil menu_drop">
+                <li><a href="#menu" class="size_icon"> <i class="fa fa-bars"></i> </a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="places_of_interest.html">Places of interest</a></li>
+                    <li><a href="gastronomy.html">Gastronomy</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="questionnaire.html">Questionnaire</a></li>
+                </ul>
+                </li>
+            </ul>
+                <ul class="menu_pc menu_drop">
+                    <li><a href="index.html" target="_self">Home</a></li>
+                    <li><a href="places_of_interest.html" target="_self">Places of Interest</a></li>
+                    <li><a href="gastronomy.html" target="_self">Gastronomy</a></li>
+                    <li><a href="gallery.html" target="_self">Gallery</a></li>
+                    <li><a href="questionnaire.html" target="_self">Questionnaire</a></li>
+                </ul>
+        </nav>
+        <section class="col-8 col-s-9 section">
+
+            <!--Here we include the most important of the page-->
+            <h2>Questionnaire</h2>
+            <h3>The next questions will probe the knowledge about this magnificient city, do the best!</h3>
+
+            <p><b>Answer the following questions:</b></p>
+            <p>1.Which is the region where is placed Venice?</p>
+                <input type="radio" name="region" value="Lombardia" id="q11"> Lombardía<br>
+                <input type="radio" name="region" value="Toscana" id="q12"> Toscana<br>
+                <input type="radio" name="region" value="Veneto" id="q13"> Veneto<br>
+                <input type="radio" name="region" value="Piamonte" id="q14"> Piamonte<br>
+                <br><br>
+
+            <p>2.Which is the oldest bridge in Venice?</p>
+                <input type="radio" name="bridge" value="Sighs" id="q21"> Bridge of Sighs<br>
+                <input type="radio" name="bridge" value="Rialto" id="q22"> Rialto bridge<br>
+                <input type="radio" name="bridge" value="Academy" id="q23"> Academy bridge<br>
+                <input type="radio" name="bridge" value="Calatrava" id="q24"> Calatrava bridge<br>
+                <br><br>
+
+            <p>3.How many islands are in Venice?</p>
+                <input type="radio" name="islands" value="20" id="q31"> Less than 20<br>
+                <input type="radio" name="islands" value="20-80" id="q32"> Between 20 and 80<br>
+                <input type="radio" name="islands" value="80-100" id="q33"> Between 80 and 100<br>
+                <input type="radio" name="islands" value="100" id="q34"> More than 100<br>
+                <br><br>
+
+            <p>4.Which is the most typical risotto in Venice?</p>
+                <input type="radio" name="risotto" value="Pomodoro" id="q41"> Risotto al pomodoro<br>
+                <input type="radio" name="risotto" value="Aglio" id="q42"> Risotto all'aglio nero<br>
+                <input type="radio" name="risotto" value="Seppia" id="q43"> Risotto al nero di seppia<br>
+                <input type="radio" name="risotto" value="Carbonara" id="q44"> Risotto alla carbonara<br>
+                <br><br>
+
+            <p>5.Which dessert is really famous during the Carnival in Venice?</p>
+                <input type="radio" name="dessert" value="Fritole" id="q51"> Fritole<br>
+                <input type="radio" name="dessert" value="Tiramisu" id="q52"> Tiramisu<br>
+                <input type="radio" name="dessert" value="Fripapa" id="q53"> Fripapa<br>
+                <input type="radio" name="dessert" value="Pancakes" id="q54"> Cheese pancakes<br>
+                <br><br>
+
+                
+
+                <button onclick="calculate()">Check</button>
+
+                <p id="mark"> </p>
+                <p id="feedback"> </p>
+
+                <script>
+
+                    function calculate(){
+                    /*The checked property sets or returns the checked state of a radio button*/
+                        var q11 = document.getElementById("q11").checked;
+                        var q12 = document.getElementById("q12").checked;
+                        var q13 = document.getElementById("q13").checked;
+                        var q14 = document.getElementById("q14").checked;
+
+                        var q21 = document.getElementById("q21").checked;
+                        var q22 = document.getElementById("q22").checked;
+                        var q23 = document.getElementById("q23").checked;
+                        var q24 = document.getElementById("q24").checked;
+
+                        var q31 = document.getElementById("q31").checked;
+                        var q32 = document.getElementById("q32").checked;
+                        var q33 = document.getElementById("q33").checked;
+                        var q34 = document.getElementById("q34").checked;
+
+                        var q41 = document.getElementById("q41").checked;
+                        var q42 = document.getElementById("q42").checked;
+                        var q43 = document.getElementById("q43").checked;
+                        var q44 = document.getElementById("q44").checked;
+
+                        var q51 = document.getElementById("q51").checked;
+                        var q52 = document.getElementById("q52").checked;
+                        var q53 = document.getElementById("q53").checked;
+                        var q54 = document.getElementById("q54").checked;
+
+                    /*we use the variable mark to store the correct and wrong answers*/
+                        var mark=0;
+                    /*we use the variable feedback to store the feedback information depends on the answers of the user*/
+                        var feedback="";
+                    
+                    /*question 1: check a radio input*/
+                    if(q13){
+                        mark+=20;
+                        feedback+="Question 1: That's correct! Veneto is the region where is placed Venice.<br>"
+                    }
+                        else if (!q11 && !q12 && !q13 && !q14)
+                            feedback+="Question 1: Sorry, you didn't select any, try again!<br>"
+                            
+                            else
+                                feedback+="Question 1: Sorry, you're wrong, try again!<br>"
+                    
+                    /*question 2: check a radio input*/
+                    if(q22){
+                        mark+=20;
+                        feedback+="Question 2: That's correct! The oldest bridge in Venice is the Rialto bridge.<br>"
+                    }
+                        else if (!q21 && !q22 && !q23 && !q24)
+                            feedback+="Question 2: Sorry, you didn't select any, try again!<br>"
+                            
+                            else
+                                feedback+="Question 2: Sorry, you're wrong, try again!<br>"
+                    
+                    /*question 3: check a radio input*/
+                    if(q34){
+                        mark+=20;
+                        feedback+="Question 3: That's correct! Actually, there are 117 small islands!<br>"
+                    }
+                        else if (!q31 && !q32 && !q33 && !q34)
+                            feedback+="Question 3: Sorry, you didn't select any, try again!<br>"
+                            
+                            else
+                                feedback+="Question 3: Sorry, you're wrong, try again!<br>"
+
+                    /*question 4: check a radio input*/
+                    if(q43){
+                        mark+=20;
+                        feedback+="Question 4: That's correct! The most typical is the risotto al nero di seppia, but we could it them all!<br>"
+                    }
+                        else if (!q41 && !q42 && !q43 && !q44)
+                            feedback+="Question 4: Sorry, you didn't select any, try again!<br>"
+                            
+                            else
+                                feedback+="Question 4: Sorry, you're wrong, try again!<br>"
+
+                    /*question 5: check a radio input*/
+                    if(q51){
+                        mark+=20;
+                        feedback+="Question 5: That's correct! The typical dessert during carnival is the fritole!<br>"
+                    }
+                        else if (!q51 && !q52 && !q53 && !q54)
+                            feedback+="Question 5: Sorry, you didn't select any, try again!<br>"
+                            
+                            else
+                                feedback+="Question 5: Sorry, you're wrong, try again!<br>"
+
+
+                    document.getElementById("mark").innerHTML="Level of Venetian knowledge: "+mark+"%";
+                    document.getElementById("feedback").innerHTML=feedback;
+
+
+                    }
+
+                </script>
+
+        </section>
+        <aside class="col-2 col-s-12 aside">
+            <!--Here we include the aside-->
+            <h3 class="bold_italic">What?</h3>
+            <p>Venice is a city in northeastern Italy and the capital of the Veneto region.</p>
+            <a class="link" href="https://en.wikipedia.org/wiki/Venice" target="_blank">wikipedia</a>
+            <h3 class="bold_italic">Where?</h3>
+            <p>It is sited on a group of 117 small islands that are separated by canals and linked by bridges. These are located in the marshy Venetian Lagoon 
+                which stretches along the shoreline, between the mouths of the Po and the Piave Rivers.</p>
+            <a class="link" href="https://www.visitingvenice.net/where-venice" target="_blank">Visiting Venice</a>
+            <h3 class="bold_italic">How?</h3>
+            <p>You can reach Venice airport from all over Europe.</p>
+            <a class="link" href="https://www.tripsavvy.com/venice-travel-guide-and-attractions-1548175" target="_blank">trip savvy</a>
+            <ul>
+                <li>By air
+                  <ol>
+                      <li>Plane</li>
+                      <li>Helicopter</li>
+                      <li>Delta</li>
+                  </ol>
+                </li>
+                <li>By water
+                    <ol>
+                      <li>Jet</li>
+                      <li>Ferry</li>
+                      <li>Kayak</li>
+                    </ol>
+                </li>
+                <li>By train</li>
+                <li>By bus</li>
+            </ul>
+        </aside>
+</main>
+<div class="container_center">
+    <div>
+    <a href="questionnaire.html"><img src="images/questionnaire/house.png" class="house" alt="logocasa"></a>
+    </div>
+</div>
+<footer class="footer">
+    <!--Here we include the footer-->
+    <p>This is a Webpage made for Marks Language by Luis Navarrete.</p>
+</footer>
+</body>
+</html>

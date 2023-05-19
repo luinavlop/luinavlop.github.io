@@ -1,0 +1,39 @@
+img{
+width:100%;
+height: 150px;
+border:2px solid rgb(130, 147, 204);
+}
+img:hover {
+    /*We put some transparency in the images when you hover:*/
+    opacity: 0.8;
+    /*If we want to make the images bigger when you hover it:*/
+    /*transform: scale(2);*/
+}
+/*Z-index property specifies the order of the elements*/
+.forefront {
+    z-index: 100;
+}
+.background {
+    z-index: -1;
+}
+div{
+padding:5px;
+}
+/*We put some subtittles to the images:*/
+figure {
+    position: relative;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+  
+figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #cac8c8;
+    padding: 5px;
+}
+  

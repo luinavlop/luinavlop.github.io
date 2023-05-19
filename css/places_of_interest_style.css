@@ -1,0 +1,35 @@
+table {
+    border-collapse: collapse;
+    }
+    table, td, th {
+    border: 1px solid black;
+    padding:10px;
+    }
+    .row1{
+    background-color:#4c71d8 ;
+    color:white;
+    text-align: center;
+    }
+    .row2{
+        background-color:#7ba5ce ;
+        color:white;
+        text-align: center;
+    }
+    .row3{
+        background-color:#a5c2e1 ;
+        color:white;
+        text-align: center;
+    }
+    tr{
+    background-color: #c5d5dc ;
+    color: #3a809a ;
+    }
+    td{
+    border: 1px dotted black;
+}
+h4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}

@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+    /*background-color: #ADD8E6;*/
+    }
+    /* With this we comprobe the boxes: * {border: 1px solid black;}*/
+    .container{
+    display:flex;
+    flex-wrap: wrap;
+    /* By default: flex-direction: row;*/
+    }
+    /*We use this class for centering elements*/
+    .container_center{
+    display:flex;
+    justify-content: center;
+    }
+    /*We put in header the style we want*/
+    .header {
+        background: #373B44;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */   
+        padding: 15px;
+    }
+    nav ul {
+        display:flex;
+        flex-direction: row;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    .size_icon{
+        font-size: 25px;
+    }
+     .menu_drop>li>a{
+        background-color: #106fd5;
+        color: white;
+        padding: 10px;
+        display: block;
+        text-decoration: none;
+        min-width: 50px;
+        text-align:center;
+    }
+    /*Nested list*/
+    .menu_drop>li>ul>li>a{
+        background-color: #0e5fcf;
+        color: white;
+        padding: 10px;
+        display: block;
+        text-decoration: none;
+        min-width: 100px;
+        text-align:center;
+    }
+    /*List and nested list*/
+    .menu_drop li>a:hover{
+        color: rgb(13, 13, 158);
+        background-color: rgb(168, 194, 244);
+    }
+    /*By default the nested list is hidden*/
+    .menu_drop>li>ul{
+        display: none;
+        position: absolute; /*the dropdown is over the content*/
+    }
+    /*When you (hovering) roll the cursor over the item, the drop-down-menu appears*/
+    .menu_drop>li:hover> ul {
+        display:block;
+        }
+    .menu_pc {
+        display: none;
+    }
+    
+    p {
+        text-align: justify;
+    }
+    img{
+        width:100%;
+    }
+
+    .bold_italic {font-weight:bold;font-style:italic;}
+    .section {
+        padding: 15px;
+    }
+    /*We put in aside the style we want*/
+    .aside {
+        background-color: #447cec;
+        padding: 15px;
+        color: #ffffff;
+        text-align: left;
+        font-size: 14px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        }
+    /*We use this class to fix the boockmark in order to keep the dimensions in every page*/
+    .house{
+        width: 40px; 
+        height: 40px; 
+        padding: 5px; 
+        border: 0px;
+        }
+    /*We put in footer the style we want*/
+    .footer {
+            background-color: #0c3884;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /*text-align: center;*/
+            font-size: 12px;
+            padding: 15px;
+            }
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+        }
+    /* For tablets: */
+    @media only screen and (min-width: 600px) {
+        .col-s-1 {width: 8.33%;}
+        .col-s-2 {width: 16.66%;}
+        .col-s-3 {width: 25%;}
+        .col-s-4 {width: 33.33%;}
+        .col-s-5 {width: 41.66%;}
+        .col-s-6 {width: 50%;}
+        .col-s-7 {width: 58.33%;}
+        .col-s-8 {width: 66.66%;}
+        .col-s-9 {width: 75%;}
+        .col-s-10 {width: 83.33%;}
+        .col-s-11 {width: 91.66%;}
+        .col-s-12 {width: 100%;}
+    .menu_movil {
+            display: none;
+            }
+    .menu_pc {
+            display: block;
+            }
+        }   
+    /* For desktop: */
+        @media only screen and (min-width: 768px) {
+        .col-1 {width: 8.33%;}
+        .col-2 {width: 16.66%;}
+        .col-3 {width: 25%;}
+        .col-4 {width: 33.33%;}
+        .col-5 {width: 41.66%;}
+        .col-6 {width: 50%;}
+        .col-7 {width: 58.33%;}
+        .col-8 {width: 66.66%;}
+        .col-9 {width: 75%;}
+        .col-10 {width: 83.33%;}
+        .col-11 {width: 91.66%;}
+        .col-12 {width: 100%;}
+        }        
